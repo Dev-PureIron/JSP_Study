@@ -18,35 +18,32 @@ public class MemberDAO {
    
 //   아이디 중복검사
    public boolean checkId(String identifiaciaton) {
-	   return sqlSession.selectOne("checkId", identifiaciaton) != null;
+	   return sqlSession.selectOne("member.checkId", identifiaciaton) != null;
    }
    
 //   회원가입
    public void join(MemberVO memberVO) {
-	   sqlSession.selectOne("join", memberVO);
+	   sqlSession.selectOne("member.join", memberVO);
    }
    
 //   로그인
-   public void login(String identification, String password) {
-	   HashMap<String, String> hashmap = new HashMap();
-	   hashmap.put("login", identification);
-	   hashmap.put("login", password);
-   }
-   
-//   회원정보 수정
-//   public void modify(MemberVO memberVO) {
+   public long login(String memberIdentification, String memberPassword) {
+	   HashMap<String, String> loginmap = new HashMap();
+	   loginmap.put("memberIdentification", memberIdentification);
+	   loginmap.put("memberPassword", memberPassword);
 	   
-//   }
-   
-//   회원탈퇴
-   public void withdrawall(int id) {
-	   
+	    return sqlSession.selectOne("member.login", loginmap);
+	    
    }
    
 //   전체 회원목록 
-   public void selectAll(MemberVO memberVO) {
-	   
-   }
+   public List<MemberVO> selectAll(MemberVO memberVO) {
+	   return sqlSession.selectList("member.selectAll");
+	   }
    
-}
 
+//	회원 정보 수정
+	public void update(MemberVO memberVO) {
+		sqlSession.update("member.update", memberVO);
+	}
+}

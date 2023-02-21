@@ -15,7 +15,7 @@
 	<c:if test="${id == 'member'}">
 		<h1>회원 페이지</h1>
 	</c:if> --%>
-	<c:choose>
+	<c:choose> 		
 		<c:when test="${id eq 'admin'}">
 			<h1>관리자 페이지</h1>
 		</c:when>

@@ -11,9 +11,21 @@
 		values( #{memberName}, #{memberBirth}, #{memberIdentification}, #{memberPassowrd})
 	</insert>
 	
-	<select id="login" parameterType="string" resultType="id">
-		select tbl_Id from tbl_member_identification, member_password = values( #{memberIdentifiaction}, #{memberPassword})
+	<select id="login" parameterType="map" resultType="long">
+		select tbl_Id from tbl_member
+		where memberIdentification = #{memberIdentifiaction} and memberPassword = #{memberPassword})
 	</select>
+	
+	<select id="selectAll" resultType="memberVO">
+		select member_id, member_name, member_birth, member_identification, member_password form tbl_member
+	</select>
+	
+	<update id="update" parameterType="memberVO">
+      update tbl_member
+      set member_name = #{memberName}
+      where member_id = #{memberId}
+   </update>
+
 	
 </mapper>
 
