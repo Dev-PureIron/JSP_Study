@@ -90,7 +90,8 @@ EL 연산자
 
 -------------------------------------------------------------------------------------------------------------------------
 
-![Uploading jsp.png…]()
+![jsp](https://user-images.githubusercontent.com/122762442/231779940-4f32a571-e6c1-4eae-9ff9-2dfe1ff1c56c.png)
+
 
 
 [jsp]
@@ -114,7 +115,8 @@ EL 연산자
       페이지가 확장될 수록 유지보수가 좋지 않다. 하지만 설계는 쉽다.
       
       
-![Uploading model2 페이지이동.PNG…]()
+ ![model2 페이지이동](https://user-images.githubusercontent.com/122762442/231779997-8927f506-f56e-45ff-9d3a-be3d3f95674e.PNG
+
 
 
 [model2]
