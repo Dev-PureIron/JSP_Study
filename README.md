@@ -90,7 +90,8 @@ EL 연산자
 
 -------------------------------------------------------------------------------------------------------------------------
 
-![jsp](https://user-images.githubusercontent.com/122762442/231779940-4f32a571-e6c1-4eae-9ff9-2dfe1ff1c56c.png)
+
+![model2 페이지이동](https://user-images.githubusercontent.com/122762442/231780206-0071b4f5-6d10-433b-9fa3-e6ea3234e001.PNG)
 
 
 
